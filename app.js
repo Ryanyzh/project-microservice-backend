@@ -4,18 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
-const firebase = require("firebase");
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 var sdgRouter = require("./routes/sdg");
 
 var app = express();
-
-firebase.initializeApp(firebaseConfig);
-
-const firebaseDatabase = firebase.firestore();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
